@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Student Registration System to add, edit and display student details.">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="https://img.freepik.com/free-vector/education-logo-template_23-2149492975.jpg?t=st=1732798478~exp=1732802078~hmac=74c731fe8412f5fe39a2031d35b4c6cb518e26443130e16cab8a11ab7ba2a154&w=740" alt="academy-logo">
+        <div>
+            <h1 class="heading1">Student Registration System</h1>
+            <p id="siteDescription">Note: This system is supervised by the academy management and is used for official purposes only.</p>
+        </div>
+        <div class="icon-wrapper">
+            <i class="fa fa-home" style="font-size:48px"></i>
+            <span class="tooltip">Home</span>
+        </div>
+    </header>
+   
+    <main>
+        <!-- Registration Portal (Form) -->
+        <section id="registration">
+            <h1 class="heading2">Register Here - Join Us Today!</h1>
+            <form id="form">
+               <div><label for="name">Student Name:</label>
+                <input type="text" id="name" placeholder="Enter student's name"></div> 
+                <div> <label for="studentId">Student ID:</label>
+                <input type="number" id="studentId" placeholder="Enter student's ID" required></div>
+                <label for="email">E-mail ID:</label>
+                <input type="email" id="email" placeholder="Enter email address" required>
+                <label for="contact">Contact No.:</label>
+                <input type="number" id="contact" placeholder="Enter contact number" required>
+                <button type="submit" id="registerBtn">Register</button>
+            </form>
+        </section>
+
+        <!--Student Records (Table)-->
+        <section id="records">
+            <h1 class="heading3">Student Records Management<br><span class="description3">Below is the list of registered students. 
+                All changes are securely saved to the system for future reference.</span></h1>
+        <div id="container">
+                <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Email ID</th>
+                        <th>Contact No.</th>
+                        <th>Edits</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody"></tbody>
+            </table>
+        </div>
+        </section>
+        <footer>&copy 2024 Known Student Registration System. All rights reserved.</footer>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
